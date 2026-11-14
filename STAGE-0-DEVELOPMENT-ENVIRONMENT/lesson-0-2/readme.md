@@ -1,21 +1,7 @@
-Lesson 0.1: Introduction to Python
-
-Learn:
-What Python is.
-What programming languages do.
-Interpreted vs compiled languages.
-How Python executes instructions.
-What libraries and packages are.
-What Python is used for in data science.
-
-Exercise:
-Research three real-world applications of Python.
-Identify five Python libraries used in data science.
-Explain the difference between Python and a Python library.
-
 Lesson 0.2: Setting Up Your Environment
 
 Learn:
+
 Installing Python.
 Installing VS Code.
 Python extensions.
@@ -34,7 +20,6 @@ Create a Jupyter Notebook.
 Install and import a Python library.
 
 Checkpoint:
-
 Can you create and execute a Python script independently?
 Can you explain the difference between a Python script and a notebook?
 Can you install and import an external library?

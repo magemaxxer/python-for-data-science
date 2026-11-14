@@ -1,0 +1,30 @@
+What are Python Scripts?
+
+A Python scriipt is a plain text file ending with the .py extension.
+
+You can open, edit and save Python scripts with programs called text editors.
+There are a plethora of text editors to choose from, including some that save work directly in a terminal window.
+Even something like Windows Notepad works okay as a text editor in a pinch.
+
+Another option for creating and editing Python scripts is an integrated development environment.
+These are programs designed specifically for software development.
+
+
+What are Jupyter Notebooks?
+
+Jupyter Notebooks are a little more complex than regular Python scripts. 
+A Jupyter Notebook consists of multiple cells; each cell can contain a block of Python code or plain text.
+This means you can surround pieces of code with useful information like explanations, links and images.
+This makes it easier for you and your colleagues to refer back to the code and understand what it is doing.
+Output, such as printed messages or plots, appears under each cell in the Notebook.
+
+Unlike Python scripts, Jupyter Notebooks are executed in a nonlinear fashion.
+This means that you can execute code blocks in arbitrary order instead of being forced to execute every block from top to bottom.
+
+While this nonlinearity may lead to some confusion if you run blocks out of order it also means you don't have to re-run previous parts
+of code after each small change.
+This can be very helpful if, for example, your code spends a long time loading data from a database.
+Whilst a regular Python script has to reload the entire dataset on each execution, a Jupyter Notebook
+lets you run the cell responsible for loading the data once. 
+You can then create new cells to work with the data without ever needing to reload it.
+

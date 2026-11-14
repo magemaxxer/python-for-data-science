@@ -1,0 +1,311 @@
+What is Python?
+
+Python is an interpreted, object-oriented high-level programming language with dynamic semantics.
+Its high-level built in data structures combined with dynamic typing and dynamic binding make it very attractive for Rapid App Development.
+
+
+What is dynamic typing?
+
+Dynamic typing is a core feature of Python that sets it apart from statically typed languages.
+
+In Python variables are not bound to a specific type at declaration, instead the type is determined at runtime based on the assigned value. 
+
+This means a single variable can hold different types of data throghout its lifetime; making Python a flexible and easy-to-use language for 
+rapid development and prototyping.
+
+
+What is dynamic binding?
+
+In object-oriented programming, the concept of dynamic binding is closely related to polymorphism.
+
+In Python dynamic binding is the process of resolving a method or attribute at runtime, instead of at compile time.
+
+According to the polymorphism feature, different objects respond differently to the same method call based on their implementations.
+This behaviour is achieved through method overriding, where a subclass provides its implementation of a method defined in its superclass.
+
+The Python interpreter determines which is the appropriate method or attribute to invoke based on the object's type or class hierarchy
+at runtime. This means that the specific method or attribute to be called is determined dynamically, based on the actual type of object.
+
+
+What do programming languages do?
+
+Programming languages are sets of instructions that enable humans to communicate with computers using a series of symbols that serve as 
+a bridge allowing humans to turn our ideas into instructions computers can understand. 
+
+Like spoken languages, each language has its own unique syntax, structure, vocabulary and even slang or shortcuts.
+
+Interpreted VS Compiled Languages 
+
+Every program is a set of instructions; irregardless of the complexity of the function it carries out.
+
+Compilers and interpreters take human-readable code and convert it to computer-readable machine code.
+
+In a compiled language the target machine directly translates the program.
+In an interpreted language the source code is not directly translated by the target machine, instead a
+different program, aka the interpreter, reads and executes the code.
+
+What does this actually mean?
+
+Let's use a paella recipe in Spanish as an example.
+
+There are two ways a non-Spanish speaker can utilise this recipe.
+
+The first way is if someone already translates the recipe into English.
+You or any other English speaker can read the English version of the recipe and make paella.
+Think of the translated recipe as the compiled version.
+
+The second way is if you have a friend who knows Spanish.
+When you're ready to make paella your friend sits next to you and translates the recipe line by line.
+In this case, your friend is the interpreter for the interpreted version of the recipe.
+
+Compiled Languages
+
+Compiled languages are converted directly into machine code that the processor can execute.
+As a result they tend to be much faster and more efficient to execute than interpreted languages.
+They also give the developer more control over hardware aspects like CPU usage and memory management.
+
+Compiled languages require a 'build' step - they need to be manually compiled first.
+You need to 'rebuild' the program every time you make a change.
+In the recipe example the entire translation is written before it gets to you.
+If the original author decides to use a different type of sauce the entire recipe needs to be translated again
+and resent to you.
+
+Examples of pure compiled languages are C, C++, Erlang, Haskell, Rust and Go.
+
+Interpreted Languages 
+
+Interpreters run through a program line by line and execute each command.
+Here, if the author decided to use a different sauce, he could scratch the old one out and add the new one.
+Your translator friend can then convey that change to you as it happens.
+
+Interpreted languages were once significantly slower than compiled languages.
+But, with the development of just-in-time compilation that gap is shrinking.
+
+Examples of common interpreted languages are PHP, Ruby, Python and JavaScript.
+
+Advantages and disadvantages 
+
+Advantages of compiled languages:
+
+Programs compiled into native machine code tend to be faster than interpreted code.
+This is because the process of translating code at run time adds to the overhead and can cause
+the program to be slower overall.
+
+Disadvantages of compiled languages
+
+Additional time is needed to complete the entire compilation step before testing.
+Platforam dependence of the generated binary code.
+
+Advantages of interpreted languages
+
+Interpreted languages tend to be more flexible and often offer features like dynamic typing and smaller
+program size. Also, because interpreters executre the source program code themselves, the code itself is
+platforn independent.
+
+Disadvantages of interpreted languages
+
+The most notable disadvantage is typical execution speed compared to compiled languages.
+
+
+How does Python execute instructions?
+
+Python executes instructions through a set of internal steps that convert human-readable code into instructions
+the machine can understand.
+
+Source code is not executed directly by the machine.
+Python processes the code internally before execution.
+This process allows the system to interpret and run programs correctly.
+
+Execution of a Python Programming
+
+Step 1: Compilation to Bytecode
+
+Python first checks code for syntax errors, if the code is valid it is then converted into bytecode.
+
+Bytecode is an intermediate, platform-independent format
+It is not machine code
+It represents instructions like calculations, comparisons and memory operations
+
+This bytecode is stored in a .pyc file inside a folder named __pycache__.
+
+Python handles this process automatically and usually you do not need to create .pyc files manually.
+
+Step 2: Execution by Python Virtual Machine (PVM)
+
+The Python Virtual Machine (PVM) reads the bytecide and executes it.
+
+PVM understands the operating system and processor
+It converts bytecode into machine-level instructions
+These instructions are then executed by the CPU
+
+This is why Python works on different platforms without changing the code.
+
+The PVM executes bytecode instruction by instruction, not all at once, due to Python being an
+interpreted language. This line-by-line execution makes Python easy to debug but slightly slower than
+fully compiled languages.
+
+About JIT (Just-In-Time) Compilation
+
+To improve performance, some Python implementations use a Just-In-Time (JIT) compiler.
+
+How JIT Works 
+
+Python first executes code normally using bytecode
+The JIT compiler monitors the program and identifies frequently executed code (hot code)
+This hot code is compiled into machine code at runtime
+The compiled code is reused for subsequent executions, avoiding repeated interpretation
+
+CPython vc PyPy
+
+CPython executes bytecode line by line and does not use JIT. This makes repeated operations like large loops slower.
+PyPy uses JIT to compile frequently used code into machine code. Reusing this compiled code makes loops and computation-heavy
+tasks run much faster.
+
+In CPython -> Each iteration is interpreted -> slower execution
+In PyPy -> Hot loop is compiled into machine code -> much faster execution
+
+Viewing Bytecode Using dis
+
+Python provides the dis module to inspect bytecode.
+
+Example:
+
+import dis
+dis.dis("a = 10\nb = 10\nprint(a + b)")
+
+The dis module (disassembler) shows:
+
+Line numbers
+Bytecode instructions
+Operation names and arguments
+This is mainly useful for learning and debugging, not for everyday programming.
+
+
+What are libraries and packages?
+
+Python packages are a way to organise and structure code by grouping related modules into directories.
+
+A package is essentially a folder containing an __init__.py file and one or more Python files (modules)
+Packages allow modules to be easily shared and distributed across different applications
+
+Key Components of Python Packages
+
+Module: A single Python file containing reusable code
+Package: A directory containing modules and a special __init__.py file
+Sub-Packages: Packages nested within other packages for deeper organisation
+
+Creating and Accessing Packages
+
+1. Create a Directory - Create a folder that will act as the package root
+2. Add Modules - Inside the directory, add Python files (modules). Each module can contain related functions or classes.
+3. Add __init__.py - Add an __init__.py file to the directory. This file tells Python that the directory should be treated as a package.
+4. Create Sub-Packages (Optional) - One can organise code further by creating subdirectories with their own __init__.py files
+5. Import Modules - Modules or functions inside the package can be imported using dot notation, for example.
+
+Python libraries are groups of modules that contain functions, classes and methods to perform common tasks like data manipulation,
+maths operations, web scraping and more.
+
+Python libraries make coding faster, cleaner and more efficient by providing ready to use solutions for different domains such as data science,
+web development, machine learning and automation.
+
+How Python Libraries Works
+
+Importing a library gives you access to the pre-written code stored in separate mdoules. Instead of writing the logic for a task, you import 
+the library that already has it.
+
+Most Python libraries consist of .py source files. Some libraries may also include compiled extension files such as .pyd or .dll on Windows and
+.so files on Linux/macOS for improved performance.
+
+Types of Python Library
+
+Python libraries are divided into two main types:
+
+1. Built-in Python Standard Library
+
+It is a collection of modules that come bundled with every Python installation, we don’t need to install anything separately. Most of these modules are written in C for better performance.
+
+Examples of built-in modules:
+
+math: Mathematical operations
+os: Interact with the operating system
+datetime: Date and time operations
+random: Generate random numbers
+json: Handles JSON data encoding and decoding.
+
+2. External Python Libraries
+
+External (third-party) libraries are not included with Python by default. You can install them easily using the pip package manager. Popular External Python Libraries:
+
+NumPy: A library for numerical computing that provides support for arrays, matrices, and mathematical operations.
+Pandas: A library for data analysis and manipulation using powerful data structures like DataFrame and Series.
+Matplotlib: It is a data visualization library that helps you create a wide variety of static, animated and interactive plots. It supports charts such as bar graphs, line charts, histograms and scatter plots.
+SciPy: A library for advanced scientific and mathematical computations built on top of NumPy.
+TensorFlow: It is an open-source machine learning and deep learning framework developed by Google. It allows developers to build and train neural networks for tasks such as image recognition, natural language processing and predictive modeling.
+Scikit-learn: It is a popular machine learning library built on top of NumPy and SciPy. It offers simple and efficient tools for classification, regression, clustering and dimensionality reduction.
+Scrapy: A library for web scraping and extracting structured data from websites.
+PyTorch: A deep learning framework with GPU support for building and training neural networks.
+PyGame: It is a cross-platform library used for developing 2D games and multimedia applications. It provides modules for handling graphics, sound and user input with ease.
+Keras: A high-level deep learning library that provides an easy interface for building neural networks.
+
+Using Libraries in Python Programs
+
+To use any library, it first needs to be imported into your Python program using the import statement. Once imported, you can directly call the functions or methods defined inside that library. You can import libraries in three main ways:
+
+Import the entire library: import library_name for example, import math
+Import a specific function or class: from library_name import function_name for example, from math import sqrt
+Import a library with an alias: import library_name as alias for example, import pandas as pd
+
+
+What is Python used for in data science?
+
+Python is a programming language widely used by Data Scientists.
+
+Python has in-built mathemtical libraries and functions which make it easy to calculate mathematical problems and perform data analysis.
+
+Examples of these libraries include:
+
+Pandas - This library is used for structured data operations, like import CSV files, create dataframes, and data preparation
+Numpy - This is a mathematical library. Has a powerful N-dimensional array object, linear algebra, Fourier transform, etc.
+Matplotlib - This library is used for visualization of data.
+SciPy - This library has linear algebra modules
+
+
+Real World Applications of Python
+
+Python is used across many application domains.
+
+These include;
+
+Web and Internet Development
+
+Frameworks such as Django and Pyramid
+Micro-frameworks such as Flask and Bottle
+Advanced content management systems such as Plone and django Compilers
+
+Scientific and Numerical
+
+Python is sued widely in scientific and numeric computing
+
+SciPy is a collection of packages for mathematics, science and engineering
+Pandas is a data analysis and modelling library
+IPython is a powerful interactive shell that features easy editing and recording of a work session and supports visualisation and parallel
+computing
+
+Desktop GUIs
+
+The Tk GUI library is included with most binary distributions of Python
+
+
+Python Libraries for Data Science
+
+Pandas - Industry standard for data cleaning, manipulation and analysis
+NumPy - The foundation for numerical computing inside Python
+SciPy - Built on top of NumPy, this library is used for scientific computing, optimisation, intgration and advance linear algebra operations
+Matplotlib - The bedrock visualisation framework for Python, capable of building customisable static, animated or interactive plots
+Plotly - A library specialised in creating interactive, web-ready graphs and web applications that integrate into Jupyter notebooks smoothly
+
+
+What is the difference between Python and a Python library?
+
+The difference between Python and a Python library is that Python is the programming language itself whilst a Python library is a group of modules containing functions, classes and methods to perform tasks like
+data manipulation, mathematics and more.

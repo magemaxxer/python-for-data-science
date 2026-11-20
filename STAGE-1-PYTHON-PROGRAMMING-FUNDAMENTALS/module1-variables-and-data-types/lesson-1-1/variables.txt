@@ -1,0 +1,107 @@
+What is a variable? 
+
+A variable is a named piece of data stored in computer memory.
+
+
+Global & Local Variables in Python
+
+Variables store data in memory and scope defines the specific region of a program where a variable is accessible.
+Scope dictates the visibility and lifetime of a variable within the source code.
+Variables are categorised into two primary scopes: Global and Local.
+
+Local Variables
+
+Local variables are defined inside a function and exist only during its execution; they cannot be accessed from outside the function.
+
+Example:
+
+def greet():
+    msg = "Hello from inside the function!"
+    print(msg)
+
+greet()
+
+We define greet() with a local variable msg and print it. 
+Since msg exists only during the function's execution, it's accessed within the function. Calling greet() displays the message.
+
+Global Variables
+
+Global variables are declared outside all functions and can be accessed anywhere in the program including inside functions.
+
+Example:
+
+msg = "Python is awesome!"
+
+def display():
+    print("Inside function:", msg)
+
+display()
+print("Outside function:", msg)
+
+In this example msg is a global variable accessibly both inside and outside the display() function.
+Calling display() prints the global msg and printing msg outside the function works as expected.
+
+Use of Local and Global Variables
+
+If a variable is defined both globally and locally with the same name the local variable shadows the global variable inside the function.
+Changes to the local variable do not affect the global variable unless the variable is explicitly declared as global.
+
+Example: 
+
+def fun():
+    s = "Me too."
+    print(s)
+
+s = "I love Geeks"
+fun()   
+print(s)
+
+Output:
+
+Me too.
+I love Geeks
+
+Inside the fun() function 's' is a local variable set to "Me too" and prints this value. Outside, the global 's' variable remains "I love Geeks"
+so printing 's' afterwards displays the global value.
+
+Modifying Global Variables
+
+
+
+
+Variable Assignment in Python
+
+Python has no command for declaring a variable.
+
+A variable is created the moment you first assign a value to it.
+
+Example:
+
+x = 5
+print (x)
+
+Output:
+
+5
+
+Variables do not need to be declared with any particular type, and can even change type after they have been set.
+
+
+Naming Conventions in Python
+
+Naming conventions refer to rules ad guidelines for naming variables, functions, class and other entities in your code. 
+Adhering to these conventions ensures consistency, readability and better collaboration among developers/
+
+Modules
+
+Modules are files containing Python definitions and statements.
+When naming a module use lowercase letters and underscores ensuring the name is descriptive and concise.
+
+Example: 
+
+def add_numbers(a, b):
+    result = a + b
+    print(f"The sum is: {result}")
+    return result
+
+
